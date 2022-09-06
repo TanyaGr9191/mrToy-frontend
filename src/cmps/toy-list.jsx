@@ -1,38 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
+import { ToyPreview } from './toy-preview'
 
-export const Counter = () => {
-    const [count, setCount] = useState(0)
+export const ToyList = ({ toys, onRemoveToy, history }) => {
 
-    useEffect(() => {
-        console.log('Mounted')
-        document.title = 'Counter!'
-
-        // Unmount
-        return () => {
-            document.title = 'Counter out!'
-        }
-    }, [])
-
-
-    useEffect(() => {
-        console.log('count:', count)
-        if (!count) return
-        document.title = count
-
-    }, [count])
-
-
-    const increment = () => {
-        setCount(prevCount => prevCount + 1)
-    }
-
-    console.log('render')
+    console.log('render toy-list')
     return (
-        <div >
-            <p>You clicked {count} times</p>
-            <button onClick={increment}>
-                Click me
-            </button>
+        <div >toy-list
+            {toys.map(toy => <ToyPreview key={toy._id} toy={toy} onRemoveToy={onRemoveToy}  />)}
         </div>
         )
 }

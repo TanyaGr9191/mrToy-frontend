@@ -1,4 +1,5 @@
-export const ToyEdit = () => {
+export const ToyEdit = (props
+    ) => {
 
     return (
         <div className='toy-edit'>
