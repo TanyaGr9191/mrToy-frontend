@@ -12,7 +12,6 @@ export function loadToys() {
             .catch(err => {
                 console.log('Cannot set toys:', err)
             })
-
     }
 }
 
@@ -35,3 +34,18 @@ export function setFilterBy(filterBy) {
         dispatch({ type: 'SET_FILTER_BY', filterBy })
     }
 }
+
+export function addToy() {
+    return (dispatch) => {
+        const toy = toyService.getNewToy()
+        toyService.save(toy)
+            .then(savedToy => {
+                console.log('Added Toy', savedToy)
+                dispatch({ type: 'ADD_TOY', toy: savedToy })
+            })
+            .catch(err => {
+                console.error('Cannot add toy:', err)
+            })
+    }
+}
+

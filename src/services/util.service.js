@@ -20,7 +20,7 @@ function makeId(length = 6) {
     return txt
 }
 
-function makeLorem(size = 5) {
+function makeLorem(size = 1) {
     var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', '.', 'All', 'this happened', 'more or less', '.', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', '.', 'It', 'was', 'a pleasure', 'to', 'burn']
     var txt = ''
     while (size > 0) {
@@ -65,25 +65,25 @@ function getMonthName(date) {
 
 function createdAt(time) {
     var newDate = new Date(time)
-    // var year = newDate.getFullYear()
-    // var month = newDate.getMonth() + 1
-    // var date = newDate.getDate() 
+    var year = newDate.getFullYear()
+    var month = newDate.getMonth() + 1
+    var date = newDate.getDate() 
     var hours = newDate.getHours()
     hours = hours % 12
     hours = hours ? hours : 12
     var minutes = newDate.getMinutes()
-    var seconds = newDate.getSeconds()
+    // var seconds = newDate.getSeconds()
   
     var ampm = hours >= 12 ? 'PM' : 'AM'
   
-    // var monthToDisplay = (month + '').padStart(2, '0')
-    // var dateToDisplay = (date + '').padStart(2, '0')
-    // var hoursToDisplay = (hours + '').padStart(2, '0')
+    var monthToDisplay = (month + '').padStart(2, '0')
+    var dateToDisplay = (date + '').padStart(2, '0')
+    var hoursToDisplay = (hours + '').padStart(2, '0')
     var minutesToDisplay = (minutes + '').padStart(2, '0')
-    var secondsToDisplay = (seconds + '').padStart(2, '0')
+    // var secondsToDisplay = (seconds + '').padStart(2, '0')
   
     // return `${hoursToDisplay}:${minutesToDisplay} ${ampm}`
-    return `${minutesToDisplay}:${secondsToDisplay}`
-    // return `Date: ${dateToDisplay}/${monthToDisplay}/${year} Time: ${hoursToDisplay}:${minutesToDisplay} ${ampm}`
-    // return `${dateToDisplay}/${monthToDisplay}/${year} Time: ${hoursToDisplay}:${minutesToDisplay}:${secondsToDisplay} ${ampm}`
+    // return `${minutesToDisplay}:${secondsToDisplay}`
+    return `Date: ${dateToDisplay}/${monthToDisplay}/${year} Time: ${hoursToDisplay}:${minutesToDisplay} ${ampm}`
+    // return `Date: ${dateToDisplay}/${monthToDisplay}/${year} Time: ${hoursToDisplay}:${minutesToDisplay}:${secondsToDisplay} ${ampm}`
   }

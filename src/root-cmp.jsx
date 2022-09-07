@@ -17,8 +17,9 @@ function App() {
             <AppHeader/>
             <main>
                 <Routes>
-                    <Route path='toy-app/details/:id' element={<ToyDetails />}/>
-                    <Route path='toy-app/edit/:id?' element={<ToyEdit />} />
+                    <Route path='toy-app/edit/:id' element={<ToyEdit />} />
+                    <Route path='toy-app/edit' element={<ToyEdit />} />
+                    <Route path='toy-app/:id' element={<ToyDetails />}/>
                     <Route path='about' element={<About />} >
                         <Route path='team' element={<Team />} />
                         <Route path='vision' element={<Vision />} />

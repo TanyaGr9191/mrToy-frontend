@@ -9,6 +9,7 @@
     background-size: 37%;
     background-position: 50% calc(100% - 50px);
     overflow-y: hidden;
+    margin: 8px;
 }
 
 
