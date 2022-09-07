@@ -32,7 +32,7 @@ export const ToyEdit = (props) => {
     const onSaveToy = (ev) => {
         ev.preventDefault()
         toyService.save({ ...toy }).then(() => {
-            navigate('/toy-app')
+            navigate('/toy')
         })
     }
 

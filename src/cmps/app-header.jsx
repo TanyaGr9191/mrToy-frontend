@@ -16,7 +16,7 @@ export const AppHeader = () => {
             <nav>
                 <NavLink to="/">Home</NavLink> |
                 <NavLink to="/about">About</NavLink> |
-                <NavLink to="/toy-app">Toys</NavLink> 
+                <NavLink to="/toy">Toys</NavLink> 
             </nav>
             <h1>My App</h1>
         </header>

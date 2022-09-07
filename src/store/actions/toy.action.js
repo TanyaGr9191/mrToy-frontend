@@ -36,8 +36,8 @@ export function setFilterBy(filterBy) {
 }
 
 export function addToy() {
-    return (dispatch) => {
-        const toy = toyService.getNewToy()
+const toy = toyService.getNewToy()
+    return (dispatch, getState) => {
         toyService.save(toy)
             .then(savedToy => {
                 console.log('Added Toy', savedToy)

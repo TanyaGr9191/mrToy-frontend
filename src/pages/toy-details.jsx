@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { ImgContainer } from "../cmps/img-container"
-import { toyService } from '../services/toy.service'
+import { toyService } from '../services/toy.service.local'
 import { utilService } from '../services/util.service'
 
 
@@ -25,7 +25,7 @@ export const ToyDetails = (props) => {
     }
 
     const onBack = () => {
-        navigate('/toy-app')
+        navigate('/toy')
     }
 
     // console.log('render-toy-details')

@@ -17,15 +17,15 @@ function App() {
             <AppHeader/>
             <main>
                 <Routes>
-                    <Route path='toy-app/edit/:id' element={<ToyEdit />} />
-                    <Route path='toy-app/edit' element={<ToyEdit />} />
-                    <Route path='toy-app/:id' element={<ToyDetails />}/>
+                    <Route path='/' element={<Home />} />
+                    <Route path='toy' element={<ToyApp />}/>
+                    <Route path='toy/edit/:id' element={<ToyEdit />} />
+                    <Route path='toy/edit' element={<ToyEdit />} />
+                    <Route path='toy/:id' element={<ToyDetails />}/>
                     <Route path='about' element={<About />} >
                         <Route path='team' element={<Team />} />
                         <Route path='vision' element={<Vision />} />
                     </Route>
-                    <Route path='/' element={<Home />} />
-                    <Route path='toy-app' element={<ToyApp />}/>
                 </Routes>
             </main>
             <AppFooter/>

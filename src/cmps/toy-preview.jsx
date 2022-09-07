@@ -10,14 +10,14 @@ export function ToyPreview({ toy, onRemoveToy }) {
         <div  className='toy-preview'>
             <div className='info'>
                 <h2>{toy.name}</h2>
-                <Link to={`/toy-app/${toy._id}`}>
+                <Link to={`/toy/${toy._id}`}>
                     <ImgContainer src={toyImage} name={toy.name} width="75%" />
                 </Link>
                 <h4>{toy.label}</h4>
             </div>
             <section className='actions'>
                 <button onClick={() => onRemoveToy(toy._id)}>Delete</button>
-                <Link to={`/toy-app/edit/${toy._id}`} >Edit</Link>
+                <Link to={`/toy/edit/${toy._id}`} >Edit</Link>
             </section>
         </div>
     )
